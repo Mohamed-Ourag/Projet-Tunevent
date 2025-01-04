@@ -1,0 +1,160 @@
+<div class="event-details-wrapper">
+  <!-- Event Details Container -->
+  <div class="event-details-container">
+    <!-- Event Form -->
+    <form (ngSubmit)="submitForm()">
+      <!-- Title -->
+      <div class="form-group">
+        <label for="eventTitle">Event Title <span class="required">*</span></label>
+        <input
+          type="text"
+          id="eventTitle"
+          placeholder="Enter event title"
+          [(ngModel)]="event.title"
+          name="title"
+          required
+        />
+        <small class="error" *ngIf="!event.title">Event Title is required.</small>
+      </div>
+
+      <!-- Description -->
+      <div class="form-group">
+        <label for="description">Event Description</label>
+        <textarea
+          id="description"
+          placeholder="Enter event description"
+          [(ngModel)]="event.description"
+          name="description"
+        ></textarea>
+      </div>
+
+      <!-- Date and Time -->
+      <div class="form-group">
+        <label>Date and Time <span class="required">*</span></label>
+        <div class="date-time">
+          <input
+            type="date"
+            [(ngModel)]="event.date"
+            name="date"
+            required
+          />
+          <input
+            type="time"
+            [(ngModel)]="event.time"
+            name="time"
+            required
+          />
+        </div>
+        <small class="error" *ngIf="!event.date || !event.time">Both date and time are required.</small>
+      </div>
+
+      <!-- Image -->
+      <div class="form-group">
+        <label for="image">Event Image URL</label>
+        <input
+          type="text"
+          id="image"
+          placeholder="Enter event image URL"
+          [(ngModel)]="event.image"
+          name="image"
+        />
+      </div>
+
+      <!-- Venue -->
+      <div class="form-group">
+        <label for="venue">Venue</label>
+        <input
+          type="text"
+          id="venue"
+          placeholder="Enter venue"
+          [(ngModel)]="event.venue"
+          name="venue"
+        />
+      </div>
+
+      <!-- Category -->
+      <div class="form-group">
+        <label for="category">Category <span class="required">*</span></label>
+        <select
+          id="category"
+          [(ngModel)]="event.category"
+          name="category"
+          required
+        >
+          <option value="" disabled selected>Select category</option>
+          <option value="education">Education</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="networking">Networking</option>
+          <option value="sports">Sports</option>
+        </select>
+        <small class="error" *ngIf="!event.category">Category is required.</small>
+      </div>
+
+      <!-- Guests -->
+      <div class="form-group">
+        <label for="guests">Number of Guests</label>
+        <input
+          type="number"
+          id="guests"
+          placeholder="Enter expected number of guests"
+          [(ngModel)]="event.capacity"
+          name="guests"
+          min="0"
+        />
+      </div>
+
+      <!-- Location -->
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input
+          type="text"
+          id="location"
+          placeholder="Enter event location"
+          [(ngModel)]="event.location"
+          name="location"
+        />
+      </div>
+
+<!--      &lt;!&ndash; Privacy &ndash;&gt;-->
+<!--      <div class="form-group">-->
+<!--        <p>Is your event public or private?</p>-->
+<!--        <div class="radio-buttons">-->
+<!--          <label>-->
+<!--            <input-->
+<!--              type="radio"-->
+<!--              name="privacy"-->
+<!--              [(ngModel)]="event.privacy"-->
+<!--              value="public"-->
+<!--              required-->
+<!--            />-->
+<!--            Public-->
+<!--          </label>-->
+<!--          <label>-->
+<!--            <input-->
+<!--              type="radio"-->
+<!--              name="privacy"-->
+<!--              [(ngModel)]="event.privacy"-->
+<!--              value="private"-->
+<!--              required-->
+<!--            />-->
+<!--            Private-->
+<!--          </label>-->
+<!--        </div>-->
+<!--        <small class="error" *ngIf="!event.privacy">Please select a privacy option.</small>-->
+<!--      </div>-->
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn-primary">Create Event</button>
+    </form>
+  </div>
+
+  <!-- Template Preview -->
+  <div class="template-preview">
+    <img
+      [src]="selectedTemplate?.image || 'default-image.png'"
+      alt="{{ selectedTemplate?.title || 'Template Image' }}"
+    />
+    <h3>{{ selectedTemplate?.title }}</h3>
+    <button class="btn-secondary" (click)="goBackToTemplates()">Change Template</button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<table>
+  <thead>
+  <tr>
+    <th>Event Name</th>
+    <th>Date Start</th>
+    <th>Status</th>
+    <th>Attendees / Capacity</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let event of events">
+    <td>{{ event.name }}</td>
+    <td>{{ event.dateStart | date }}</td>
+    <td>{{ event.status }}</td>
+    <td>{{ event.attendees }} / {{ event.capacity }}</td>
+  </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,176 @@
+<app-header></app-header>
+
+<div class="main-banner">
+  <div class="counter-content">
+    <ul>
+      <li>Days<span>{{ days }}</span></li>
+      <li>Hours<span>{{ hours }}</span></li>
+      <li>Minutes<span>{{ minutes }}</span></li>
+      <li>Seconds<span>{{ seconds }}</span></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="main-content">
+          <div class="next-show">
+            <i class="fa fa-arrow-up"></i>
+            <span>Next Show</span>
+          </div>
+          <h6>Opening on Thursday, March 31st</h6>
+          <h2>The Sunny Hill Festival 2022</h2>
+          <div class="main-white-button">
+            <a routerLink="/ticketdetails">Purchase Tickets</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="show-events-carousel">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <owl-carousel-o [options]="carouselOptions">
+          <ng-template carouselPrev>
+            <button class="custom-prev-btn">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+          </ng-template>
+          <ng-template carouselNext>
+            <button class="custom-next-btn">
+              <i class="fa fa-arrow-right"></i>
+            </button>
+          </ng-template>
+          <ng-container *ngFor="let item of venues">
+            <ng-template carouselSlide>
+              <a [routerLink]="item.detailsUrl">
+                <img [src]="item.image" [alt]="item.title" />
+              </a>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-amazing-venues></app-amazing-venues>
+
+
+<div class="main-bannerr">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="main-content">
+          <h2>Top Rating Events</h2>
+          <div class="underline"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="venue-tickets">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let event of filteredEvents">
+        <mat-card class="venue-card">
+          <mat-card-header>
+            <!-- Ajout d'une icône pour le titre -->
+            <div class="card-title-container">
+              <i class="fa fa-ticket icon-title"></i>
+              <mat-card-title>{{ event.title }}</mat-card-title>
+            </div>
+          </mat-card-header>
+          <img mat-card-image [src]="event.image" [alt]="event.title" />
+          <mat-card-content>
+            <div class="venue-info">
+              <p><i class="fa fa-sitemap"></i> {{ event.sitemap }}</p>
+              <p><i class="fa fa-user"></i> {{ event.userCapacity }} people</p>
+              <p><strong>Price:</strong> {{ event.price }}</p>
+            </div>
+            <div class="rating">
+              <ng-container *ngFor="let starClass of generateStars(event.rating)">
+                <i class="fa rating-star" [ngClass]="starClass"></i>
+              </ng-container>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button class="purchase-button">
+              Buy Tickets
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="coming-events">
+  <div class="left-button">
+    <div class="main-white-button">
+      <a routerLink="/show-events">Discover More</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let venu of venues">
+        <div class="event-item">
+          <div class="thumb">
+            <a [routerLink]="venu.detailsUrl"><img [src]="venu.image" [alt]="venu.title" /></a>
+          </div>
+          <div class="down-content">
+            <a [routerLink]="venu.detailsUrl"><h4>{{ venu.title }}</h4></a>
+            <ul>
+              <li><i class="fa fa-clock-o"></i> {{ venu.time }}</li>
+              <li><i class="fa fa-map-marker"></i> {{ venu.location }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Subscribe Section -->
+<div class="subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h4>Subscribe Our Newsletter:</h4>
+      </div>
+      <div class="col-lg-8">
+        <form id="subscribe" action="" method="get">
+          <div class="row">
+            <div class="col-lg-9">
+              <fieldset>
+                <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+              </fieldset>
+            </div>
+            <div class="col-lg-3">
+              <fieldset>
+                <button type="submit" id="form-submit" class="main-dark-button">Submit</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div >
+  <app-footer></app-footer>
+</div>
+
+
+
+

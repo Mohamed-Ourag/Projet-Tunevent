@@ -1,0 +1,113 @@
+<app-header></app-header>
+<div class="page-heading-organisateur">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Looks like you've haven't created any events yet</h2>
+        <span>Let's get started by creating your first event; just click the link below.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rent-venue-tabs">
+  <div class="container">
+    <div class="row" id="tabs">
+      <div class="col-lg-12">
+        <div class="heading-tabs">
+          <div class="row">
+            <div class="col-lg-8">
+              <ul>
+                <li><a href="javascript:void(0)" (click)="setActiveTab('tabs-1')"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a></li>
+                <li><a href="javascript:void(0)" (click)="setActiveTab('tabs-2')"><i class="fa-solid fa-chart-bar"></i> Summary</a></li>
+                <li><a href="javascript:void(0)" (click)="setActiveTab('tabs-3')">Royce Hall</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <div class="main-dark-button">
+                <a routerLink="/design-template"> Creat New Event</a>
+              </div>
+              <div class="main-dark-button">
+                <a routerLink="/my-events">My Events</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <section class="tabs-content">
+          <!-- Tab 1 -->
+          <article id="tabs-1" *ngIf="activeTab === 'tabs-1'">
+            <div>
+              <app-event-management></app-event-management>
+            </div>
+
+          </article>
+
+          <!-- Tab 2 -->
+          <article id="tabs-2" *ngIf="activeTab === 'tabs-2'">
+            <app-summary></app-summary>
+          </article>
+
+          <!-- Tab 3 -->
+          <article id="tabs-3" *ngIf="activeTab === 'tabs-3'">
+            <div class="row">
+              <div class="col-lg-9">
+                <div class="right-content">
+                  <h4>Royce Hall</h4>
+                  <p>Maecenas ut pharetra felis. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                  <ul class="list">
+                    <li>Royce Hall</li>
+                    <li>$5,860 per day</li>
+                    <li>1,250 Guests</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div id="map">
+                  <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="240px" frameborder="0" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+                  <h5>Any Question?</h5>
+                  <p>Tumeric air affogato sare torial waistcoat denim stumber.</p>
+                  <div class="text-button">
+                    <a routerLink="/ticket-details">Need Direction? <i class="fa fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Subscribe Section -->
+<div class="subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h4>Subscribe Our Newsletter:</h4>
+      </div>
+      <div class="col-lg-8">
+        <form id="subscribe" action="" method="get">
+          <div class="row">
+            <div class="col-lg-9">
+              <fieldset>
+                <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+              </fieldset>
+            </div>
+            <div class="col-lg-3">
+              <fieldset>
+                <button type="submit" id="form-submit" class="main-dark-button">Submit</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

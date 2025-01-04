@@ -1,0 +1,739 @@
+.template-selection {
+  padding: 20px;
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.progress-bar li {
+  color: gray;
+}
+
+.progress-bar li.active {
+  color: black;
+  font-weight: bold;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex;
+}
+
+.filter-section {
+  width: 20%;
+}
+
+.filter-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-section ul li button {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  text-align: left;
+}
+
+.template-list {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.template-card {
+  width: calc(50% - 10px);
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.template-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.template-details h3 {
+  margin: 10px 0;
+}
+
+.template-details p {
+  font-size: 14px;
+  color: #666;
+}
+
+.template-details button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+/* Container principal */
+.template-selection {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Barre de progression */
+.breadcrumb nav {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.progress-bar li {
+  flex: 1;
+  text-align: center;
+  color: gray;
+  padding: 10px 0;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.progress-bar li.active {
+  color: white;
+  background-color: #007bff;
+  font-weight: bold;
+}
+
+/* En-tête */
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.header p {
+  color: #666;
+}
+
+/* Section principale */
+.content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Barre latérale (Filtres) */
+.filter-section {
+  flex: 1;
+}
+
+.filter-section h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.filter-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-section ul li {
+  margin-bottom: 10px;
+}
+
+.filter-section ul li button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.filter-section ul li button:hover {
+  text-decoration: underline;
+}
+
+/* Liste des templates */
+.template-list {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.template-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.template-card:hover {
+  transform: scale(1.03);
+}
+
+.template-image img {
+  width: 100%;
+  height: auto;
+}
+
+.template-details {
+  padding: 10px;
+}
+
+.template-details h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.template-details p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.template-details button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.template-details button:hover {
+  background-color: #0056b3;
+}
+/* Ajoutez de l'espacement entre les sections */
+.template-selection {
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* Style pour le texte d'en-tête */
+.header h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.header p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Ajustez la barre latérale pour une meilleure présentation */
+.filter-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-section ul li {
+  margin: 10px 0;
+}
+
+.filter-section ul li button {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Alignement des cartes */
+.template-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.template-card {
+  width: calc(33.333% - 20px); /* Trois colonnes avec espacement */
+  margin: 10px 0;
+}
+.template-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.template-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter-section ul li button:hover {
+  color: #0056b3;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .template-list {
+    flex-direction: column;
+  }
+
+  .template-card {
+    width: 100%; /* Une seule colonne sur les petits écrans */
+  }
+
+  .filter-section {
+    margin-bottom: 20px;
+  }
+}
+/* Conteneur de chaque template */
+.template-card {
+  display: flex; /* Alignement horizontal (image à gauche, texte à droite) */
+  flex-direction: row; /* Ligne */
+  align-items: center;
+  margin-bottom: 20px; /* Espacement entre les templates */
+  border: 1px solid #ddd; /* Bordure autour de chaque template */
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; /* Largeur maximale d'un template */
+}
+
+/* Conteneur de l'image */
+.template-image img {
+  width: 300px; /* Largeur fixe pour l'image */
+  height: 300px; /* Hauteur fixe pour l'image */
+  object-fit: cover; /* Ajuste l'image pour qu'elle rentre dans le conteneur */
+  margin-right: 20px; /* Espacement entre l'image et les détails */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+/* Conteneur des détails */
+.template-details {
+  flex: 1; /* Prend le reste de l'espace disponible */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titre */
+.template-details h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Description */
+.template-details p {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Bouton */
+.template-details button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.template-details button:hover {
+  background-color: #0056b3;
+}
+
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.step.active .circle {
+  background-color: #007bff;
+  color: white;
+}
+
+.step p {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.step.active p {
+  color: #007bff;
+}
+
+.line {
+  width: 50px;
+  height: 2px;
+  background-color: #ddd;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.step.active ~ .line {
+  background-color: #007bff;
+}
+
+.header {
+  text-align: center; /* Centrer horizontalement le texte */
+  margin-bottom: 20px; /* Ajouter un espace en dessous */
+}
+
+.header h1 {
+  font-size: 2.5rem; /* Taille de police pour le titre */
+  font-weight: bold; /* Rendre le texte en gras */
+  color: #000; /* Couleur noire pour le titre */
+  margin: 0; /* Supprimer les marges par défaut */
+}
+
+.header p {
+  font-size: 1rem; /* Taille de police pour le sous-titre */
+  color: #666; /* Couleur grise pour le texte */
+  margin: 10px 0 0 0; /* Ajouter un espace au-dessus du paragraphe */
+  font-weight: normal; /* Rendre le texte normal (non gras) */
+}
+body {
+  background-color: #f7f7f7; /* Gris clair proche du blanc */
+  margin: 0; /* Supprimer les marges par défaut */
+  font-family: Arial, sans-serif; /* Assurer une police uniforme */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px 0; /* Ajouter un peu d'espace autour de l'en-tête */
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.design-template-container {
+  background-color: #f7f7f7; /* Gris clair */
+  padding: 20px; /* Ajouter de l'espace autour */
+  min-height: 100vh; /* S'assurer que le conteneur occupe toute la hauteur */
+  font-family: Arial, sans-serif; /* Appliquer une police générale */
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.filter-section {
+  width: 20%;
+}
+
+.template-list {
+  width: 80%;
+}
+
+.template-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 15px;
+}
+
+
+
+.template-details h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.template-details p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.template-details button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.template-details button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur de l'image */
+.template-image-container {
+  position: relative;
+  display: block;
+
+  overflow: hidden;
+}
+
+/* Image à l'intérieur du conteneur */
+.template-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bouton masqué par défaut */
+.template-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Masquer le bouton par défaut */
+  background-color: rgba(0, 123, 255, 0.9); /* Couleur bleu avec transparence */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Transition douce */
+}
+
+/* Afficher le bouton uniquement au survol de l'image */
+.template-image-container:hover .template-button {
+  display: block; /* Bouton visible au survol */
+}
+
+/* Effet hover sur le bouton */
+.template-button:hover {
+  background-color: rgba(0, 86, 179, 1); /* Couleur légèrement différente au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur de l'image */
+.template-image-container {
+  position: relative;
+  display: block;
+
+  overflow: hidden;
+}
+
+/* Image */
+.template-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.3s ease; /* Transition douce pour l'effet */
+}
+
+/* Overlay gris clair (par-dessus l'image) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Gris très clair avec transparence */
+  opacity: 0; /* Masqué par défaut */
+  transition: opacity 0.3s ease; /* Transition douce */
+}
+
+/* Bouton masqué par défaut */
+.template-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Masquer le bouton par défaut */
+  background-color: rgba(0, 123, 255, 0.8); /* Couleur bleu clair avec transparence */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Transition douce */
+}
+
+/* Effets au survol */
+.template-image-container:hover .template-image {
+  filter: brightness(90%); /* Réduit légèrement la luminosité */
+}
+
+.template-image-container:hover .overlay {
+  opacity: 1; /* Rendre l'overlay visible */
+}
+
+.template-image-container:hover .template-button {
+  display: block; /* Bouton visible au survol */
+}
+
+/* Effet hover sur le bouton */
+.template-button:hover {
+  background-color: rgba(0, 86, 179, 1); /* Couleur légèrement différente au survol */
+}
+
+/* Conteneur pour le fond blanc et les points */
+.scree-nav-wrapper {
+  position: absolute;
+  top: 0; /* Aligner avec le haut de l'image */
+  left: 0; /* Commencer à gauche */
+  background-color: #fff; /* Fond blanc */
+  width: 100%; /* Étendre sur toute la largeur de l'image */
+  height: 30px; /* Ajustez la hauteur selon vos besoins */
+  display: flex;
+  align-items: center; /* Aligner les points verticalement */
+  padding-left: 10px; /* Espacement des points par rapport au bord gauche */
+  z-index: 10; /* Assurez-vous que c'est au-dessus de l'image */
+  border-top-left-radius: 2px; /* Ajoutez un arrondi si souhaité */
+  border-top-right-radius: 2px; /* Ajoutez un arrondi si souhaité */
+}
+
+/* Conteneur pour les points */
+.scree-nav {
+  display: flex;
+  flex-direction: row; /* Points alignés horizontalement */
+  gap: 5px; /* Espacement entre les points */
+}
+
+/* Style des points */
+.scree-nav .dot {
+  width: 6px; /* Taille du point */
+  height: 6px; /* Taille du point */
+  background-color: #000; /* Couleur des points */
+  border-radius: 50%; /* Cercle parfait */
+}
+
+
+.template-image-container {
+  position: relative; /* Nécessaire pour positionner correctement les éléments absolus à l'intérieur */
+  border-radius: 8px; /* Ajoutez des coins arrondis, si nécessaire */
+  overflow: hidden; /* Assurez-vous que les coins arrondis masquent le contenu */
+  box-shadow: 0px 1px 3px black;
+; /* Ajoute une légère ombre autour de l'image */
+}
+
+.template-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+

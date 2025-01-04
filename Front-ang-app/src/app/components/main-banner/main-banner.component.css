@@ -1,0 +1,270 @@
+/* Account Dashboard */
+.account-dashboard {
+  padding: 20px;
+}
+
+
+
+/* Filters Section */
+.filters {
+  margin: 20px 0;
+}
+
+.filters mat-button-toggle-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* Mat Table */
+.mat-table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Summary Stats */
+.summary-stats mat-card {
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* No Color Style */
+.no-color {
+  color: inherit;
+  background: transparent;
+  border-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+/* Rating Stars */
+.rating {
+  margin-top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Venue Card Styles */
+.venue-card {
+  margin: 12px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 95%;
+  padding-bottom: 10px; /* Ajout d'un padding en bas */
+  min-height: 200px; /* Réduction de la hauteur minimale */
+}
+
+.venue-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Venue Info */
+.venue-info {
+  font-size: 13px; /* Réduction de la taille du texte */
+  line-height: 1.2; /* Espacement réduit entre les lignes */
+  color: #555;
+  overflow: hidden; /* Masquer tout dépassement */
+  text-overflow: ellipsis; /* Ajouter "..." pour le contenu coupé */
+  white-space: nowrap; /* Garder le texte sur une seule ligne */
+}
+
+.venue-info p {
+  margin: 4px 0;
+}
+
+.venue-info strong {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Rating Stars */
+.rating-star {
+  font-size: 18px;
+  color: #ffcc00;
+  margin-right: 3px;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.rating-star:hover {
+  transform: scale(1.15);
+  color: #ffc107;
+  cursor: pointer;
+}
+
+/* Purchase Button */
+.purchase-button {
+  background-color: #ff5722;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.purchase-button:hover {
+  background-color: #e64a19;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+
+/* Venue Card Styles */
+.venue-card {
+  margin: 12px 5px 80px 13px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%; /* Ajuster la largeur */
+  height: 800px; /* Définir une hauteur fixe pour chaque carte */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Répartition uniforme du contenu */
+  padding: 15px; /* Ajouter un espace intérieur */
+}
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-star {
+  color: #ffcc00; /* Couleur des étoiles */
+  font-size: 20px; /* Taille des étoiles */
+  margin-right: 5px; /* Espacement entre les étoiles */
+}
+
+.rating-star.fa-star-o {
+  color: #ddd; /* Couleur pour les étoiles non remplies */
+}
+
+
+
+.event-title {
+  font-size: 1.8rem; /* Augmenter légèrement la taille */
+  color: #ff5722; /* Conserver la couleur vive */
+  font-weight: bold; /* Renforcer le poids du texte */
+  margin: 15px 0; /* Ajouter un espacement vertical */
+  text-align: center; /* Centrer le texte */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espacement entre l'icône et le texte */
+  background: #fffbe7; /* Ajouter une légère couleur d'arrière-plan */
+  padding: 8px 15px; /* Ajouter un rembourrage pour mieux encadrer */
+  border-radius: 8px; /* Arrondir légèrement les coins */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre douce */
+}
+
+
+
+.mat-card {
+  margin-bottom: 20px; /* Ajouter de l'espace entre les cartes */
+}
+
+.mat-card-title {
+  text-transform: uppercase; /* Mettre le texte en majuscules */
+  letter-spacing: 1px; /* Espacement entre les lettres */
+}
+
+/* Prix */
+.venue-info p strong {
+  color: #4caf50; /* Vert clair */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* Section Title Styling */
+.main-bannerr {
+  text-align: center;
+  padding: 80px 10px;
+  margin-bottom: 15px;
+  position: relative;
+  background: #f5f5f5; /* Couleur de fond douce */
+  border-radius: 8px;
+}
+
+.main-bannerr h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ff5722;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+  transition: all 0.3s ease; /* Transition pour effet au hover */
+}
+
+.main-bannerr h2:hover {
+  transform: scale(1.05); /* Légère augmentation de taille */
+  color: #e64a19; /* Couleur un peu plus foncée */
+}
+
+/* Decorative Underline */
+.main-bannerr .underline {
+  width: 160px;
+  height: 5px;
+  background: #ff5722;
+  margin: 20px auto 0;
+  border-radius: 2px;
+  animation: slideIn 1s ease-out; /* Animation au chargement */
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 160px;
+    opacity: 1;
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .main-bannerr h2 {
+    font-size: 36px;
+  }
+  .main-bannerr .underline {
+    width: 120px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

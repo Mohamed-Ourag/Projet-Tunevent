@@ -1,0 +1,191 @@
+.drawer-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 300px;
+  background-color: #1d1f20; /* Couleur du fond sombre */
+  color: white;
+  padding: 20px;
+}
+
+.drawer-content h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.review div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.review div img {
+  width: 50px;
+  margin-right: 15px;
+}
+
+.review div h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.review div p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 50px;
+  height: 100vh;
+}
+
+.login-form-container {
+  max-width: 400px;
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-form-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+
+
+.form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  width: 100%;
+}
+
+
+/* Container */
+.drawer-container {
+  height: 100vh;
+}
+
+/* Drawer Styles */
+.sidenav {
+  width: 300px;
+  background-color: rgba(40,57,101,1); /* Dark background */
+  color: white;
+  padding: 20px;
+}
+
+
+
+/* Review Section */
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+
+
+.review-details {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.review-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.logo {
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: -5px;
+
+  font-style: normal;
+  color: #656c74;
+  padding: 10px  5px 70px 5px;
+
+}
+
+
+.review-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #c0c0c0;
+}
+
+/* Container */
+.drawer-container {
+  height: 100vh;
+}
+
+/* Drawer Styles */
+.sidenav {
+  width: 300px;
+  background-color: #1d1f20; /* Dark background */
+  color: white;
+  padding: 20px;
+}
+
+
+
+/* Review Section */
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.review-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.review-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.stars {
+  font-size: 18px;
+  color: gold;
+  margin: 5px 0;
+}
+
+.review-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #c0c0c0;
+}
+
+

@@ -1,0 +1,92 @@
+.nav .login-btn {
+  display: inline-flex; /* Pour aligner l'icône et le texte */
+  align-items: center; /* Centre verticalement le contenu */
+  justify-content: center;
+  background-color: #0000ff; /* Couleur de fond (bleu dans l'image) */
+  color: #fff; /* Couleur du texte */
+  font-weight: bold;
+  padding: 10px 20px; /* Espacement interne */
+  border-radius: 25px; /* Bouton arrondi */
+  text-transform: capitalize;
+  transition: all 0.3s ease; /* Animation pour les interactions */
+  text-decoration: none; /* Supprime le soulignement */
+}
+
+.nav .login-btn i {
+  margin-right: 8px; /* Espacement entre l'icône et le texte */
+  font-size: 16px; /* Taille de l'icône */
+}
+
+.nav .login-btn:hover {
+  background-color: #343a3e; /* Change la couleur au survol */
+  color: #fff;
+}
+
+.fa-chevron-down {
+  transition: transform 0.3s ease; /* Animation fluide */
+}
+
+.fa-chevron-down.rotate {
+  transform: rotate(180deg);
+}
+
+/* Consolidé .user-name */
+.user-name {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.user-name:hover {
+  color: #007bff; /* Change la couleur au survol */
+}
+
+.user-name.active i {
+  transform: rotate(180deg); /* Animation de la flèche */
+}
+
+/* Consolidé .dropdown-menu */
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  margin: 0;
+  padding: 15px 0;
+  min-width: 180px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 8px 20px 0px 25px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: gainsboro;
+  color: #fff;
+}

@@ -1,0 +1,16 @@
+.my-events-container {
+  padding: 20px;
+}
+
+.event-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.no-events {
+  text-align: center;
+  color: #555;
+}

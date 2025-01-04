@@ -1,0 +1,18 @@
+<div class="my-events-container">
+  <h1>My Created Events</h1>
+  <p *ngIf="isLoading">Loading your events...</p>
+
+  <div *ngIf="!isLoading && userEvents.length === 0" class="no-events">
+    <p>You have not created any events yet.</p>
+  </div>
+
+  <div *ngIf="!isLoading && userEvents.length > 0" class="events-list">
+    <div *ngFor="let event of userEvents" class="event-card">
+      <h3>{{ event.title }}</h3>
+      <p><strong>Date:</strong> {{ event.date | date }}</p>
+      <p><strong>Location:</strong> {{ event.location }}</p>
+      <p><strong>Category:</strong> {{ event.category }}</p>
+      <p><strong>Rating:</strong> {{ event.rating }}</p>
+    </div>
+  </div>
+</div>

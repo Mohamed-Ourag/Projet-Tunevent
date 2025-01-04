@@ -1,0 +1,78 @@
+<!-- ***** Pre Header ***** -->
+<div class="pre-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-6">
+        <span>Hey! The Show is Starting in 15 Days.</span>
+      </div>
+      <div class="col-lg-6 col-sm-6">
+        <div class="text-button">
+          <a routerLink="/rent-venue">Contact Us Now! <i class="fa fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+          <a routerLink="/" class="logo">Tun<em>event</em></a>
+          <i class="bi bi-menu-button"></i>
+          <!-- ***** Logo End ***** -->
+
+          <!-- ***** Menu Start ***** -->
+          <ul class="nav">
+            <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="/shows-events" routerLinkActive="active">Shows & Events</a></li>
+            <li><a routerLink="/tickets" routerLinkActive="active">Tickets</a></li>
+            <li><a routerLink="/rent-venue" routerLinkActive="active">Rent Venue</a></li>
+            <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+
+            <!-- Bouton New Event : Visible uniquement pour le rôle ORGANIZER -->
+            <li *ngIf="userRole === 'ORGANIZER'" class="nav-login">
+              <a routerLink="/organisateur" class="login-btn">
+                <mat-icon>add_box</mat-icon> New Event
+              </a>
+            </li>
+
+            <!-- Section utilisateur -->
+            <li class="nav-login dropdown">
+              <ng-container *ngIf="userName; else loginTemplate">
+                <a (click)="toggleDropdown()" class="user-name">
+                  <i class="fa fa-user"></i> {{ userName }}
+                  <i class="fa fa-chevron-down" [ngClass]="{ 'rotate': showDropdown }"></i>
+                </a>
+                <ul class="dropdown-menu" [ngClass]="{ 'show': showDropdown }">
+                  <li><a routerLink="/my-account">My Account</a></li>
+                  <li><a (click)="onLogout()">Sign Out</a></li>
+                </ul>
+              </ng-container>
+
+              <!-- Login Template -->
+              <ng-template #loginTemplate>
+                <a routerLink="/login" class="login-btn">
+                  <i class="fa fa-user"></i> Login
+                </a>
+              </ng-template>
+            </li>
+          </ul>
+
+          <a class="menu-trigger">
+            <span>Menu</span>
+          </a>
+
+
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+<router-outlet></router-outlet>

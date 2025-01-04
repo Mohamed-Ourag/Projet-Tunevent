@@ -1,0 +1,93 @@
+<div class="bd">
+  <div class="login-wrap">
+    <div class="login-html">
+      <!-- Tabs for Sign In and Sign Up -->
+      <input
+        id="tab-1"
+        type="radio"
+        name="tab"
+        class="sign-in"
+        [checked]="!isSignUp"
+        (click)="toggleSignIn()"
+      />
+      <label for="tab-1" class="tab">Sign In</label>
+      <input
+        id="tab-2"
+        type="radio"
+        name="tab"
+        class="sign-up"
+        [checked]="isSignUp"
+        (click)="toggleSignUp()"
+      />
+      <label for="tab-2" class="tab">Sign Up</label>
+
+      <div class="login-form">
+        <!-- Login Form -->
+        <div class="sign-in-htm" *ngIf="!isSignUp">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+            <div class="group">
+              <label for="login-email" class="label">Email</label>
+              <input id="login-email" type="email" class="input" formControlName="email" />
+            </div>
+            <div class="group">
+              <label for="login-password" class="label">Password</label>
+              <input
+                id="login-password"
+                type="password"
+                class="input"
+                formControlName="password"
+              />
+            </div>
+            <div class="group">
+              <button type="submit" class="button">Sign In</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="sign-up-htm" *ngIf="isSignUp">
+          <form [formGroup]="signUpForm" (ngSubmit)="onSubmitSignUp()">
+            <div class="group">
+              <label for="signUp-name" class="label">Name</label>
+              <input id="signUp-name" type="text" class="input" formControlName="name" />
+            </div>
+            <div class="group">
+              <label for="signUp-email" class="label">Email</label>
+              <input id="signUp-email" type="email" class="input" formControlName="email" />
+            </div>
+            <div class="group">
+              <label for="signUp-password" class="label">Password</label>
+              <input
+                id="signUp-password"
+                type="password"
+                class="input"
+                formControlName="password"
+              />
+            </div>
+            <div class="group">
+              <label for="confirm-password" class="label">Confirm Password</label>
+              <input
+                id="confirm-password"
+                type="password"
+                class="input"
+                formControlName="confirmPassword"
+              />
+            </div>
+            <div class="group">
+              <label for="role" class="label">Role</label>
+              <select id="role" class="input" formControlName="role">
+                <option value="PARTICIPANT">Participant</option>
+                <option value="ORGANIZER">Organizer</option>
+              </select>
+            </div>
+            <div class="group">
+              <button type="submit" class="button" [disabled]="!signUpForm.valid">
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+<app-header></app-header>
+
+<div class="design-template-container">
+  <!-- Stepper -->
+  <div class="stepper">
+    <div class="step" [class.active]="currentStep === 1">
+      <div class="circle">1</div>
+      <p>Template</p>
+    </div>
+    <div class="line"></div>
+    <div class="step" [class.active]="currentStep === 2">
+      <div class="circle">2</div>
+      <p>Event Details</p>
+    </div>
+    <div class="line"></div>
+    <div class="step" [class.active]="currentStep === 3">
+      <div class="circle">3</div>
+      <p>Complete</p>
+    </div>
+  </div>
+
+  <!-- Step 1: Template Selection -->
+  <div *ngIf="currentStep === 1" class="template-selection">
+    <div class="header">
+      <h1>Let's choose a design template.</h1>
+      <p>First things first, let's give you some style.</p>
+    </div>
+
+    <div class="content">
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <h4>Filter Templates</h4>
+        <ul>
+          <li><button (click)="filterTemplates('Featured')">Featured</button></li>
+          <li><button (click)="filterTemplates('Standard')">Standard</button></li>
+          <li><button (click)="filterTemplates('Parties')">Parties</button></li>
+          <li><button (click)="filterTemplates('Conferences')">Conferences</button></li>
+          <li><button (click)="filterTemplates('Weddings')">Weddings</button></li>
+        </ul>
+      </div>
+
+      <!-- Template Cards -->
+      <div class="template-list">
+        <div
+          *ngFor="let template of filteredTemplates"
+          class="template-card"
+        >
+          <div class="template-image-container">
+            <div class="scree-nav-wrapper">
+              <div class="scree-nav">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <img
+              [src]="template.image"
+              alt="{{ template.title }}"
+              class="template-image"
+            />
+            <div class="overlay"></div>
+            <button class="template-button" (click)="selectTemplate(template)">
+              Select Template
+            </button>
+          </div>
+          <div class="template-details">
+            <h3>{{ template.title }}</h3>
+            <p>{{ template.description }}</p>
+            <button (click)="selectTemplate(template)">
+              Continue with {{ template.title }}
+            </button>
+            <div class="main-dark-button">
+              <a routerLink="/my-events">My Events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2: Event Details -->
+  <div *ngIf="currentStep === 2" class="event-details">
+    <div class="header">
+      <h1>Next, we just need a few more details.</h1>
+      <p>Don't worry. You can easily change this later.</p>
+    </div>
+
+    <!-- Event Details Component -->
+    <app-event-details
+      [selectedTemplate]="selectedTemplate"
+    ></app-event-details>
+
+    <!-- Navigation Buttons -->
+    <div class="navigation-buttons">
+      <button (click)="changeStep(1)" class="btn-secondary">
+        Back
+      </button>
+      <button (click)="changeStep(3)" class="btn-primary">
+        Next
+      </button>
+    </div>
+  </div>
+
+  <!-- Step 3: Complete -->
+  <div *ngIf="currentStep === 3" class="complete">
+    <div class="header">
+      <h1>Setup Complete!</h1>
+      <p>Your event setup is now complete. You can now start promoting your event.</p>
+    </div>
+
+    <!-- Restart Button -->
+    <div class="actions">
+      <button (click)="changeStep(1)" class="btn-primary">
+        Start Over
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

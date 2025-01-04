@@ -1,0 +1,564 @@
+.event-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group span {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-right: none;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.radio-group input {
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.event-options {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.option-group {
+  margin-bottom: 20px;
+}
+
+.option-group p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.radio-buttons label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.radio-buttons input {
+  margin-right: 10px;
+}
+
+.radio-buttons small {
+  margin-left: 20px;
+  color: #7a7a7a;
+  font-size: 12px;
+}
+
+.radio-buttons .icon {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+/* General container styles */
+.option-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between sections */
+  font-family: Arial, sans-serif;
+}
+
+/* Selling tickets styles */
+.selling-tickets {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selling-tickets label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between input and text */
+  cursor: pointer;
+}
+
+.selling-tickets input[type="radio"] {
+  accent-color: #007bff; /* Color for radio button */
+}
+
+/* Access level styles */
+.access-level {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between access options */
+}
+
+.access-option {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.access-option .icon {
+  font-size: 24px; /* Size of icons */
+}
+
+.access-option strong {
+  font-size: 16px;
+}
+
+.access-option small {
+  font-size: 12px;
+  color: #666;
+}
+
+
+.event-options {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.option-group {
+  margin-bottom: 20px;
+}
+
+.option-group p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.radio-buttons.inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.radio-buttons.inline label {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.radio-buttons.inline label input {
+  margin-right: 10px;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.icon-container strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.icon-container small {
+  font-size: 12px;
+  color: #7a7a7a;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+.event-details-container {
+  display: flex;
+  gap: 20px;
+}
+
+.details-form {
+  flex: 3;
+}
+
+
+
+.template-preview img {
+  width:100%;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+.event-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-details-header {
+  text-align: center;
+}
+
+.event-details-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.template-preview {
+  width: 30%;
+  text-align: center;
+}
+
+
+
+.template-preview h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+
+
+.event-details-form {
+  width: 65%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group span {
+  background: #f5f5f5;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.event-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px; /* Réduit l'espacement entre les conteneurs */
+}
+
+.event-details-container {
+  flex: 1;
+  max-width: 60%; /* Ajuste la largeur du conteneur principal */
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Ajoute une légère ombre */
+}
+
+.template-preview {
+  flex: 0.3; /* Réduit la taille du conteneur preview */
+  max-width: 25%; /* Limite sa largeur maximale */
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 15px; /* Réduit le padding interne */
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Réduit l'effet d'ombre */
+}
+
+
+/* Template preview container */
+.template-preview {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour de l'image */
+  overflow: hidden;
+}
+
+/* Barre blanche avec les trois points */
+.screen-nav {
+  position: absolute;
+  top: 0; /* Alignement en haut */
+  left: 0; /* Alignement à gauche */
+  width: 100%; /* La barre blanche couvre toute la largeur de l'image */
+  height: 25px; /* Hauteur de la barre blanche */
+  background: white; /* Couleur de fond blanche */
+  display: flex;
+  align-items: center;
+  padding-left: 10px; /* Espacement pour les points */
+  border-top-left-radius: 8px; /* Coins arrondis */
+  border-top-right-radius: 8px;
+  z-index: 2; /* Priorité au-dessus de l'image */
+}
+
+/* Trois points dans la barre blanche */
+.screen-nav .button {
+  width: 6px; /* Taille du point */
+  height: 6px;
+  background-color: black; /* Couleur des points */
+  border-radius: 50%; /* Forme circulaire */
+  margin-right: 5px; /* Espacement entre les points */
+}
+
+/* Image */
+.template-preview img {
+  width: 100%; /* Image occupe toute la largeur */
+  border-radius: 8px; /* Coins arrondis */
+}
+
+.scree-nav-wrapper {
+  position: absolute;
+  top: 0; /* Aligner avec le haut de l'image */
+  left: 0; /* Commencer à gauche */
+  background-color: #fff; /* Fond blanc */
+  width: 100%; /* Étendre sur toute la largeur de l'image */
+  height: 30px; /* Ajustez la hauteur selon vos besoins */
+  display: flex;
+  align-items: center; /* Aligner les points verticalement */
+  padding-left: 10px; /* Espacement des points par rapport au bord gauche */
+  z-index: 10; /* Assurez-vous que c'est au-dessus de l'image */
+  border-top-left-radius: 2px; /* Ajoutez un arrondi si souhaité */
+  border-top-right-radius: 2px; /* Ajoutez un arrondi si souhaité */
+}
+
+.template-image-container {
+  position: relative; /* Nécessaire pour positionner correctement les éléments absolus à l'intérieur */
+  border-radius: 8px; /* Ajoutez des coins arrondis, si nécessaire */
+  overflow: hidden; /* Assurez-vous que les coins arrondis masquent le contenu */
+  box-shadow: 0px 1px 3px black;
+; /* Ajoute une légère ombre autour de l'image */
+}
+
+.scree-nav-wrapper {
+  position: absolute;
+  top: 0; /* Aligner avec le haut de l'image */
+  left: 0; /* Commencer à gauche */
+  background-color: #fff; /* Fond blanc */
+  width: 100%; /* Étendre sur toute la largeur de l'image */
+  height: 30px; /* Ajustez la hauteur selon vos besoins */
+  display: flex;
+  align-items: center; /* Aligner les points verticalement */
+  padding-left: 10px; /* Espacement des points par rapport au bord gauche */
+  z-index: 10; /* Assurez-vous que c'est au-dessus de l'image */
+  border-top-left-radius: 2px; /* Ajoutez un arrondi si souhaité */
+  border-top-right-radius: 2px; /* Ajoutez un arrondi si souhaité */
+}
+
+
+/* Conteneur pour le fond blanc et les points */
+.scree-nav-wrapper {
+  position: absolute;
+  top: 0; /* Aligner avec le haut de l'image */
+  left: 0; /* Commencer à gauche */
+  background-color: #fff; /* Fond blanc */
+  width: 100%; /* Étendre sur toute la largeur de l'image */
+  height: 30px; /* Ajustez la hauteur selon vos besoins */
+  display: flex;
+  align-items: center; /* Aligner les points verticalement */
+  padding-left: 10px; /* Espacement des points par rapport au bord gauche */
+  z-index: 10; /* Assurez-vous que c'est au-dessus de l'image */
+  border-top-left-radius: 2px; /* Ajoutez un arrondi si souhaité */
+  border-top-right-radius: 2px; /* Ajoutez un arrondi si souhaité */
+}
+
+/* Conteneur pour les points */
+.scree-nav {
+  display: flex;
+  flex-direction: row; /* Points alignés horizontalement */
+  gap: 5px; /* Espacement entre les points */
+}
+
+/* Style des points */
+.scree-nav .dot {
+  width: 6px; /* Taille du point */
+  height: 6px; /* Taille du point */
+  background-color: #000; /* Couleur des points */
+  border-radius: 50%; /* Cercle parfait */
+}
+.template-preview {
+  width: 100%;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.template-image-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.template-preview img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.template-preview h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.template-preview p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+

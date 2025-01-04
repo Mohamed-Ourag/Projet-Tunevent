@@ -1,0 +1,39 @@
+.page-heading-shows-events {
+  background-color: #333;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.ticket-details-page {
+  padding: 60px 0;
+}
+
+.ticket-details-page .left-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ticket-details-page .right-content h4 {
+  color: #333;
+}
+
+.ticket-details-page .quantity-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.ticket-details-page .quantity-content .right-content input[type="button"] {
+  background-color: #f9a825;
+  color: #fff;
+}
+
+.ticket-details-page .total h4 {
+  color: #333;
+}
+
+.ticket-details-page .warn p {
+  color: #f00;
+}

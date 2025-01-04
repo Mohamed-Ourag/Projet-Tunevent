@@ -1,0 +1,143 @@
+<app-header></app-header>
+<div class="page-heading-tickets">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Tickets On Sale Now!</h2>
+        <span>Check out upcoming and past shows & events and grab your ticket right now.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tickets-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="search-box">
+          <form id="subscribe-1" action="" method="get">
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="search-heading">
+                  <h4>Sort The Upcoming Shows & Events By:</h4>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <select value="month">
+                      <option value="month">Month</option>
+                      <option name="June" id="June">June</option>
+                      <option name="July" id="July">July</option>
+                      <option name="August" id="August">August</option>
+                      <option name="September" id="September">September</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3">
+                    <select value="location">
+                      <option value="location">Location</option>
+                      <option name="Brazil" id="Brazil">Brazil</option>
+                      <option name="Europe" id="Europe">Europe</option>
+                      <option name="US" id="US">US</option>
+                      <option name="Asia" id="Asia">Asia</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3">
+                    <select value="price">
+                      <option value="price">Price</option>
+                      <option name="min" id="min">$0 - $50</option>
+                      <option name="standard" id="standard">$50 - $100</option>
+                      <option name="high" id="high">$100 - $200</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3">
+                    <fieldset>
+                      <button type="submit" id="form-submit-1" class="main-dark-button">Submit</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="heading">
+          <h2>Tickets Page</h2>
+        </div>
+      </div>
+
+      <!-- Ticket Items -->
+      <div class="col-lg-4" *ngFor="let ticket of tickets">
+        <div class="ticket-item">
+          <div class="thumb">
+            <img [src]="ticket.image" alt="">
+            <div class="price">
+              <span>1 ticket<br>from <em>{{ ticket.price }}</em></span>
+            </div>
+          </div>
+          <div class="down-content">
+            <span>{{ ticket.availability }}</span>
+            <h4>{{ ticket.title }}</h4>
+            <ul>
+              <li><i class="fa fa-clock-o"></i> {{ ticket.time }}</li>
+              <li><i class="fa fa-map-marker"></i> {{ ticket.location }}</li>
+            </ul>
+            <div class="main-dark-button">
+              <a routerLink="/ticketdetails">Purchase Tickets</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="col-lg-12">
+        <div class="pagination">
+          <ul>
+            <li><a href="#">Prev</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Subscribe Section -->
+<div class="subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h4>Subscribe Our Newsletter:</h4>
+      </div>
+      <div class="col-lg-8">
+        <form id="subscribe" action="" method="get">
+          <div class="row">
+            <div class="col-lg-9">
+              <fieldset>
+                <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+              </fieldset>
+            </div>
+            <div class="col-lg-3">
+              <fieldset>
+                <button type="submit" id="form-submit" class="main-dark-button">Submit</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<app-footer></app-footer>
+
+
+
+
+

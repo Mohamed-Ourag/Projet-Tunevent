@@ -1,0 +1,94 @@
+.event-management-container {
+  padding: 20px;
+}
+
+.tab-container {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-elevation-z8 {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+mat-form-field {
+  width: 300px;
+}
+
+mat-paginator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+mat-tab-group {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+mat-tab-label {
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.mat-tab-label-active {
+  border-bottom: 3px solid #000;
+  color: #000;
+}
+table {
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+mat-tab-group {
+  display: flex;
+  justify-content: flex-start; /* Aligne les onglets à gauche */
+  margin: 10px 0; /* Ajoute un espace autour du groupe d'onglets */
+}
+
+mat-tab-header {
+  justify-content: flex-start; /* Assure que les onglets sont bien alignés à gauche */
+}
+
+mat-tab-label {
+  font-size: 16px; /* Ajuste la taille de la police pour les onglets */
+  font-weight: bold;
+  text-transform: capitalize; /* Retire les majuscules automatiques */
+  padding: 10px 20px; /* Ajoute un peu d'espacement autour */
+}
+
+.mat-tab-label-active {
+  border-bottom: 3px solid #007bff; /* Style pour l'onglet actif */
+  color: #007bff; /* Couleur pour l'onglet actif */
+}
+
+
+.tabs-container {
+  display: flex;
+  justify-content: flex-start; /* Aligne tout à gauche */
+  margin-bottom: 20px; /* Espace entre les onglets et le contenu */
+}
+
+mat-form-field {
+  width: 100%; /* Adapte la largeur du champ à l'écran */
+}
+
+mat-icon[matPrefix] {
+  margin-right: 8px; /* Ajoute un espace entre l'icône et le champ de recherche */
+  color: #555; /* Couleur de l'icône */
+}
+
+
+

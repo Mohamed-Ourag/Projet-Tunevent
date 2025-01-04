@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="page-heading-shows-events">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Event Details</h2>
+        <span>Check out the details of the selected event.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="event" class="event-details">
+  <div class="event-card">
+    <div class="event-header">
+      <h1>{{ event.title }}</h1>
+    </div>
+    <div class="event-content">
+      <div class="event-image">
+        <img [src]="event.image" alt="{{ event.title }}" />
+      </div>
+      <div class="event-info">
+        <p><strong>Description:</strong> {{ event.description }}</p>
+        <p><strong>Date:</strong> {{ event.date }}</p>
+        <p><strong>Time:</strong> {{ event.time }}</p>
+        <p><strong>Location:</strong> {{ event.location }}</p>
+        <p><strong>Guests:</strong> {{ event.capacity }}</p>
+        <p><strong>Category:</strong> {{ event.category }}</p>
+        <p><strong>Venue:</strong> {{ event.venue }}</p>
+        <p><strong>Average Rating:</strong> {{ event.rating | number: '1.1-1' }} / 5</p>
+      </div>
+    </div>
+
+    <!-- Rating Section -->
+    <div class="rating-section">
+      <h3>Rate this event</h3>
+      <div class="rating-input">
+        <label for="rating">Your Rating (1-5):</label>
+        <select [(ngModel)]="userRating">
+          <option *ngFor="let rating of [1, 2, 3, 4, 5]" [value]="rating">{{ rating }}</option>
+        </select>
+        <button (click)="submitRating()" class="btn-submit-rating">Submit</button>
+      </div>
+    </div>
+
+
+    <div class="event-actions">
+      <button (click)="goBack()" class="btn-back">← Back to Events</button>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

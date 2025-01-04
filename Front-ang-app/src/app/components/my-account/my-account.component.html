@@ -1,0 +1,88 @@
+<app-header></app-header>
+<div class="account-container">
+  <h2>My Account</h2>
+
+  <!-- Loading Indicator -->
+  <div *ngIf="!userInfo.email && !isEditing" class="loading">
+    Loading user information...
+  </div>
+
+  <!-- Edit Form -->
+  <form *ngIf="isEditing" [formGroup]="editForm" (ngSubmit)="onSubmitEdit()" class="edit-form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" type="text" placeholder="Enter your name" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" [disabled]="true" />
+    </div>
+
+    <div class="form-group">
+      <label for="role">Role:</label>
+      <select id="role" formControlName="role">
+        <option value="ORGANIZER">ORGANIZER</option>
+        <option value="PARTICIPANT">PARTICIPANT</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="oldPassword">Old Password:</label>
+      <input
+        id="oldPassword"
+        formControlName="oldPassword"
+        type="password"
+        placeholder="Enter your current password"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="newPassword">New Password:</label>
+      <input
+        id="newPassword"
+        formControlName="newPassword"
+        type="password"
+        placeholder="Enter a new password"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        id="confirmPassword"
+        formControlName="confirmPassword"
+        type="password"
+        placeholder="Confirm your new password"
+      />
+      <small class="error" *ngIf="editForm.hasError('passwordMismatch')">
+        Passwords do not match.
+      </small>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="save-btn" [disabled]="editForm.invalid || isSaving">
+        {{ isSaving ? 'Saving...' : 'Save' }}
+      </button>
+      <button type="button" class="cancel-btn" (click)="toggleEdit()">Cancel</button>
+    </div>
+  </form>
+
+  <!-- View Mode -->
+  <div *ngIf="!isEditing" class="view-mode">
+    <p><strong>Name:</strong> {{ userInfo.name || 'Not available' }}</p>
+    <p><strong>Email:</strong> {{ userInfo.email || 'Not available' }}</p>
+    <p><strong>Role:</strong> {{ userInfo.role || 'Not available' }}</p>
+
+    <div class="actions">
+      <button class="edit-btn" (click)="toggleEdit()">Edit Profile</button>
+      <button class="logout-btn" (click)="onLogout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="!userInfo && !isEditing" class="error">
+    Unable to fetch user details. Please log in again.
+  </div>
+</div>
+<app-footer></app-footer>

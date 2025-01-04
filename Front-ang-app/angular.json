@@ -1,0 +1,138 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "Front-ang-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/front-ang-app",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css",
+              "public/css/bootstrap.min.css",
+              "public/css/font-awesome.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "public/css/tooplate-artxibition.css",
+              "public/css/owl-carousel.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.css",
+              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+//              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+
+
+            ],
+            "scripts": [
+//              "node_modules/jquery/dist/jquery.min.js",
+//              "node_modules/jquery-ui-dist/jquery-ui.min.js",
+//             "public/js/jquery.counterup.min.js",
+//              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+//              "public/js/accordions.js",
+//              "public/js/bootstrap.min.js",
+//              "public/js/custom.js",
+//              "public/js/imgfix.min.js",
+//              "public/js/jquery-2.1.0.min.js",
+//              "node_modules/jquery/dist/jquery.min.js",
+//              "node_modules/mixitup/dist/mixitup.js",
+//              "node_modules/owl.carousel/dist/owl.carousel.js",
+//             "node_modules/@popperjs/core/dist/cjs/popper.js",
+//              "node_modules/waypoints/src/waypoint.js",
+//              "node_modules/owl.carousel/dist/owl.carousel.js"
+
+
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "Front-ang-app:build:production"
+            },
+            "development": {
+              "buildTarget": "Front-ang-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+
+            "styles": [
+
+              "src/styles.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}

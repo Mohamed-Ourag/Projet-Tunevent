@@ -1,0 +1,144 @@
+/* Pagination Styles */
+.pagination ul {
+  width: 100%;
+  margin: 30px 0 100px 0;
+  text-align: center;
+}
+
+.pagination ul li {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.pagination ul li a {
+  display: inline-block;
+  font-size: 14px;
+  padding: 12px 20px;
+  background-color: #e6e7e8;
+  color: #2a2a2a;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 0.3s;
+}
+
+.pagination ul li a:hover,
+.pagination ul li.active a {
+  background-color: #343a3e;
+  color: #fff !important;
+}
+
+/* Ensure the columns are responsive */
+.col-lg-4 {
+  max-width: 33.333%; /* Three cards per row */
+  flex: 0 0 33.333%;
+  padding: 10px; /* Space between columns */
+}
+
+
+
+
+
+/* Template Preview Styles */
+.template-preview {
+  width: 100%; /* Take full width of the column */
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; /* Space between cards */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.template-preview:hover {
+  transform: translateY(-5px); /* Subtle hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Template Image Container */
+.template-image-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden; /* Hide overflow for rounded corners */
+  margin-bottom: 10px;
+}
+
+.template-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Scree Nav (Dots) */
+.scree-nav-wrapper {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.scree-nav {
+  display: flex;
+  gap: 5px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+
+/* Text Styles */
+.template-preview h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.template-preview button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.template-preview button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .col-lg-4 {
+    max-width: 50%; /* Two cards per row on smaller screens */
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-lg-4,
+  .col-md-6 {
+    max-width: 100%; /* Single card per row on very small screens */
+    flex: 0 0 100%;
+  }
+}
+
+/* Template Preview Styles */
+.template-preview p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.template-preview p strong {
+  color: #333; /* Emphasize labels */
+  font-weight: bold;
+}
+
